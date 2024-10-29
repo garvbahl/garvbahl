@@ -1,0 +1,70 @@
+(A) Project 2: RPNCalculator 
+Author : Garv Bahl
+
+(B) The purpose of the RPNCalculator is to allow a user to either use the
+command line or input a file with commands that perform arithmetic and 
+logical operations using the Reverse Polish Notations. It supports 
+complex expressions, direct stack manipulations and execution of 
+commands from files.
+
+(C) Too many TAs to mention :)
+
+(D) RPNCalc.h : This header file declares the RPNCalc class.
+
+RPNCalc.cpp : This implementation file defines the methods of the RPNCalc class
+, including command processing, stack manipulations and interactive command
+execution from user inputs or files.
+DatumStack.h : The header file for the DatumStack class, which provides the 
+definitions for managing a stack data structure used to store and manipulate 
+data during RPN calculations.
+DatumStack.cpp : This file implements the DatumStack class, detailing methods
+for stack operations such as push, pop, top etc.
+parser.cpp : This file contains functions to parse strings into data used by 
+the RPNCalc program, specifically focusing on extracting commands and values
+from user inputs.
+unit_test.cpp : A file dedicated to unit testing the individual functions
+used primarily in parser.cpp and DatumStack.cpp.
+
+(E) Running make CalcYouLater will compile all the required classes. 
+Running unit_test in terminal will run this file and compile the required
+classes.
+
+(F) The driver code is found within the RPNCalc class in the run() function. 
+This function uses a processCommand() function that is responsible for 
+accessing the input stream provided and contains the implementation that reads
+the input and is able to access different functions depending on the. 
+These functions call on other classes such as the parser class when required 
+to parse an R string. Additionally, the methods of DatumStack are used to 
+alter the items in the stack such as pop them off the stack or access the top
+member etc.
+
+(G) The abstract data type used is the stack since the stack is ideal for RPN
+calculations because it naturally supports the LIFO order required for RPN
+operations. Using a stack, operands can be pushed onto the stack as they are
+read, and operations can pop operands off, apply the operation, and push
+the result back onto the stack. 
+I used a vector to implement the stack as we have experience with this data 
+structure and it is very robust in the sense it can perform many different
+operations and most importantly it has dynamic sizing and resizing. 
+Alternative uses of the stack include expression evaluation in infix notation
+where operators and operands are intersperes. Additionally, backtracking 
+algorithms make use of stacks due to its LIFO nature. Examples include
+Depth first search in graph traversal algorithms.
+The two functions I thought were interesting were the If and the file function.
+The If function is interesting as it helps to visualize C++ if conditions with
+the use of a stack. Additionally, the use of drawings is crucial when 
+implementing this function as it can get quite tricky with nested Rstrings.
+Secondly, the file function is interesting as we are able to extract the file
+name from the Rstring and create an input file stream that is used to pass
+instructions to the processCommand class.
+
+(H) As I had mentioned in the design checkoff I intended on using unit tests to
+test the functionality of individual functions in a controlled environment. 
+I referenced the model implementation to test the functionality of larger 
+functions such as If exec and file. I also wrote down edge cases and referenced
+them with the model reference to know what exactly my output should look
+like to be able to pass the diff tests.
+
+(I) In total this assignment took 20 hours.
+
+

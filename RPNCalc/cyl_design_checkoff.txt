@@ -1,0 +1,110 @@
+Name:
+utln:        
+
+Answer the questions below, and submit your answers under the
+assignment "CalcYouLater Design Checkoff" on Gradescope.  You must
+sign up for a design checkoff slot with a TA to discuss your provided
+answers (see spec for link).
+
+Unless otherwise specified, your answers below should be *brief*: no
+more than three sentences/question.
+
+        
+1. Are you comfortable using try-catch?  How do you think you would
+   use this in your design for this assignment?
+
+   Lets say my program consists of: 
+
+   funcA() {
+	throw runtime_error() 
+   }
+
+   funcB() {
+       workA()
+       funcA()
+       workB()
+   }
+
+   funcC() {
+       try {
+	    funcB()
+       }
+       catch(runtime_error) {
+	  workC()
+       }
+   }
+
+   I call funcC().  Which of the "work" functions will be called, and
+   in what order?
+
+   Answer: 
+
+
+2. Run the following example on the reference: 
+
+   ./theCalcYouLater
+   3 { a.txt } + 
+   print 
+
+   What happens after the first command?
+   What happens after the second?
+
+   Answer:
+
+
+3. Extend the previous example.  What happens if I try to perform "+"
+   between a string and an integer?  Which elements are popped off the
+   stack and remain popped off?
+
+   Answer: 
+
+4. What does exec do?  What does file do?  What does if do?
+
+   Answer:
+
+
+5. Consider the if example from the spec: 
+
+   3 4 < 
+   { #t } { #f } if 
+   print 
+
+   Draw the stack after each Datum is processed. 
+
+Answer: 
+
+6. How will your program interact with the user? What should happen if your
+   program encounters an error during this interaction?
+
+Answer:
+
+
+7. What classes will you need in your program?  What are the important
+   functions and member variables that those classes will comprise?
+   How will the classes interact (i.e., which classes will be clients
+   of others)?
+
+   What data structures will you use?  It is okay if you use more than
+   three sentences here.  Feel free to provide your answer in list
+   form.
+
+   Answer: 
+
+
+8. There are three sources of input for processing commands: cin,
+   files, and rstrings.  What C++ data type can allow you to write the
+   same code that handles commands from all three of these sources?
+
+   Answer:
+
+
+9. How do you plan to test your program?  What evidence of testing do
+   you plan to submit?
+
+   Answer: 
+
+
+10. What is your timeline for completing this project?  What would you
+    like to have completed, and by which dates?
+
+    Answer:

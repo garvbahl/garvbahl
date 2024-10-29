@@ -1,0 +1,4 @@
+3 4 <
+{ #t } { #f } if
+print
+quit
