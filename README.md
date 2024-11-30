@@ -7,6 +7,7 @@ Project List:
 - Space shooters
 - Blackjack game
 - Reverse Polish Notation calculator
+- Huffman Encoder and Decoder
 
 Languages:
 This repository features projects using:
