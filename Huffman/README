@@ -1,0 +1,48 @@
+(A)Project : Zap
+Author : Garv Bahl
+
+(B) The purpose of this program is to demonstrate Huffman Coding by encoding 
+and decoding text files. The program efficiently compresses text data using 
+Huffman trees to minimize the overall size of the encoded data.
+
+(C) N/A
+
+(D) - HuffmanCoder.h: Header file containing the definition of the 
+HuffmanCoder class.
+- HuffmanCoder.cpp: Implementation file for the HuffmanCoder class, including
+methods for encoding, decoding, serializing, and deserializing Huffman trees.
+- main.cpp: Contains the main function to drive the program, handling file 
+input/output and user interactions.
+
+(E) To run the program use ./zap and then the mode you want and the input and 
+output files. Example - ./zap zap apple.txt apple_output.zap
+Example - ./zap unzap apple_output.zap new_apple.txt
+
+(F) Data Structures:
+- HuffmanTreeNode: Nodes of the Huffman tree, containing character, frequency,
+and pointers to child nodes.
+- std::priority_queue: Used to build the Huffman tree by ensuring the node with
+the lowest frequency is always accessible.
+
+Algorithms:
+- Huffman Coding Algorithm: Used to generate a compressed binary encoding for
+text based on character frequencies.
+- Tree Serialization and Deserialization: Custom methods to convert Huffman 
+tree into a string format and back for storage or transmission.
+
+Other Applications:
+- Data Compression: Huffman coding is widely used in compressing data in 
+formats like ZIP.
+- Communication Systems: Used to optimize data transmission over 
+bandwidth-limited channels by minimizing the data size.
+
+(G) For testing I used unit_tests to test the individual functionality 
+of the functions in phase one and then used that code in phase 2 since
+I knew it already worked to a good standard. Next, I created files in
+which I altered their input to test if my implementation was robust enough to
+handle different sorts of inputs and then diff tested the original input file
+with the output files when unzapped.
+
+(H) approximately 20 hours were spent on this assignment.
+
+
